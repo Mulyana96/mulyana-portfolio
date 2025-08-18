@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio-Mulyana</title>
+
+  <!-- Bootstrap & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+
+    /* Kartu Project */
+    .project-card {
+      background: var(--bs-body-bg);
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* Ikon Teknologi */
+    .tech-icons i {
+      font-size: 2rem;
+      margin: 5px;
+      color: orange;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .tech-icons i:hover {
+      transform: scale(1.2);
+      color: #ffb347;
+    }
+
+    /* Dark Mode */
+    #darkModeToggle i {
+      color: orange;
+      transition: color 0.3s ease;
+    }
+
+    #darkModeToggle:hover i {
+      color: #ffb347;
+    }
+
+    body.dark {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    body.dark .navbar {
+      background-color: #1f1f1f !important;
+    }
+
+    body.dark .nav-link,
+    body.dark .navbar-brand {
+      color: orange !important;
+    }
+
+    /* Warna Oranye */
+    .text-orange {
+      color: #ff6600;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 10px 0;
+    }
+
+    .navbar-brand {
+      color: orange;
+      font-weight: bold;
+      transition: transform 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    .navbar-brand:hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 8px rgba(255, 165, 0, 0.8);
+    }
+
+    .nav-link {
+      color: orange !important;
+      font-weight: 500;
+      transition: transform 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    .nav-link:hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 8px rgba(255, 165, 0, 0.8);
+    }
+
+    .nav-link.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Ikon YouTube di Project */
+    .youtube-link {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 500;
+      color: red;
+      text-decoration: none;
+      transition: transform 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    .youtube-link i {
+      font-size: 1.5rem;
+      margin-right: 6px;
+    }
+
+    .youtube-link:hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+    }
+    
+  </style>
+</head>
+<body id="page-top">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-orange" href="#">Mulyana</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-orange" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item">
+            <button id="darkModeToggle" class="btn btn-sm btn-outline-warning ms-2">
+              <i class="bi bi-moon-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Projects -->
+  <div class="container my-5 pt-5">
+    <h2 class="text-center mb-4 text-orange">Skill & Programming</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Project 1 -->
+      <div class="col-md-4 col-sm-6 text-bold">
+        <div class="project-card">
+          <img src="assets/img/skill1.png" alt="Proyek 1" class="project-img" />
+          <h5 class="fw-bold text-dark">Skill Programming</h5>
+          <p class="text-muted ">Bahasa pemrograman yang dikuasai walau tidak begitu expert.</p>
+          <div class="tech-icons">
+            <i class="devicon-html5-plain"></i>
+            <i class="devicon-css3-plain"></i>
+            <i class="devicon-bootstrap-plain"></i>
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-php-plain"></i> 
+            <i class="devicon-mysql-plain"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="project-card">
+          <img src="assets/img/skill2.png" alt="Proyek 2" class="project-img" />
+          <h5 class="fw-bold text-dark">Konten Kreator</h5>
+          <p class="text-muted">Belajar membuat dan pengelola materi kreatif 
+             seperti video, gambar, atau teks untuk dibagikan di media digital.</p>
+          <a class="youtube-link" href="https://www.youtube.com/@YourChannel" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube Channel
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="project-card">
+          <img src="assets/img/skill3.png" alt="Proyek 3" class="project-img" />
+          <h5 class="fw-bold text-dark">Prompt Enginering</h5>
+          <p class="text-muted ">Prompt Engineering adalah proses strategis dalam menyusun instruksi, konteks, 
+            dan format input untuk memaksimalkan kualitas keluaran model AI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    const icon = toggle.querySelector('i');
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) {
+        icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+      } else {
+        icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+      }
+    });
+  </script>
+</body>
+</html>
+
